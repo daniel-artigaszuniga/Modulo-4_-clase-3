@@ -29,13 +29,10 @@ const usuario = {
 };
 
 // Función tradicional para crear el mensaje de presentación
-const crearMensajePresentacion = (user) => {
-  const {nombre, edad, ciudad} = user;
+const crearMensajePresentacion = ({ nombre, edad, ciudad }) => {
+  return `Hola, mi nombre es ${nombre}, tengo ${edad} años y vivo en la ciudad de ${ciudad}.`;
 
-  const mensaje = `Hola, mi nombre es ${nombre}, tengo ${edad} años y vivo en la ciudad de ${ciudad}.`;
-
-  return mensaje;
-}
+};  
 
 // Se llama a la función y se muestra el resultado en consola
 const mensajeDeBienvenida = crearMensajePresentacion(usuario);
